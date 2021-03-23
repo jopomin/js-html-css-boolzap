@@ -165,6 +165,35 @@ i {
     background: #fff;
 }
 
+.contact {
+    width: 100%;
+    height: 90px;
+    background: #fff;
+    display: flex;
+    border-bottom: 1px solid #eaeaea;
+    padding: 15px 20px;
+}
+
+.avatar_cont {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    line-height: 80px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.avatar_cont img {
+    width: 100%;
+    height: 100%;
+}
+
+.contact p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #555;
+}
+
 
 /* Chat Area */
 
@@ -221,6 +250,11 @@ i {
     background-image: url('../img/mine.jpg');
     background-position: center;
     background-repeat: repeat;
+    padding: 50px;
+}
+
+#char_conv ul li {
+    display: inline-block;
 }
 
 #char_board {
@@ -259,4 +293,26 @@ i {
     border: none;
     border-radius: 10px;
     padding: 10px 25px;
+}
+
+.msg_sent {
+    padding: 20px;
+    background: #d5f9ba;
+    color: #555;
+    text-align: right;
+    border-radius: 5px;
+}
+
+.msg_rec {
+    padding: 20px;
+    background: #fff;
+    color: #555;
+    text-align: left;
+}
+
+/*  HOVER  */
+
+.contact:hover {
+    background: #ebebeb;
+    cursor: pointer;
 }

@@ -3,3 +3,85 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background: #009688;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 95vh;
+    background: #fff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+}
+
+/* // Contact area */
+
+#cont_area {
+    width: 35%;
+    height: 100%;
+    background: maroon;
+}
+
+#coar_user {
+    width: 100%;
+    height: 70px;
+    background: orangered;
+}
+
+#coar_newmsg {
+    width: 100%;
+    height: 80px;
+    background: lightblue;
+}
+
+#coar_src {
+    width: 100%;
+    height: 50px;
+    background: orange;
+}
+
+#contact_list {
+    width: 100%;
+    height: calc(100% - 200px);
+    background: yellow;
+}
+
+
+/* Chat Area */
+
+#chat_area {
+    width: 65%;
+    height: 100%;
+    background: olive;
+    position: relative;
+}
+
+#char_chcont {
+    width: 100%;
+    height: 70pX;
+    background: darkblue;
+}
+
+#char_conv {
+    width: 100%;
+    height: calc(100% - 70px);
+    background: blue;
+}
+
+#char_board {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 70px;
+    background: cyan;
+}

@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="css/style.css">
     <title>Boolzap - 23 Marzo</title>
@@ -12,16 +14,54 @@
 <body>
     <div id="root" class="container">
         <div id="cont_area">
-            <div id="coar_user"></div>
-            <div id="coar_newmsg"></div>
-            <div id="coar_src"></div>
+            <div id="coar_user">
+                <ul class="cous_left">
+                    <li id="user_pic"><img src="img/avatar_io.jpg" alt=""></li>
+                    <li id="user_name">Nome Utente</li>
+                </ul>
+                <ul class="cous_right">
+                    <li><i class="fas fa-circle-notch"></i></li>
+                    <li><i class="fas fa-comment-alt"></i></li>
+                    <li><i class="fas fa-ellipsis-v"></i></li>
+                </ul>
+            </div>
+            <div id="coar_newmsg">
+                <div class="nm_icon"><i class="fas fa-bell-slash"></i></div>
+                <ul>
+                    <li class="nm_title">Ricevi notifiche di nuovi messaggi</li>
+                    <li class="nm_text">Attiva notifiche desktop</li>
+                </ul>
+            </div>
+            <div id="coar_src">
+                <div class="coar_src_container">
+                    <div id="coar_src_btn"><i class="fas fa-search"></i></div>
+                    <input type="search" id="cont_src" placeholder="Cerca o inizia una nuova chat">
+                </div>
+            </div>
             <div id="contact_list"></div>
         </div>
         <div id="chat_area">
-            <div id="char_chcont"></div>
+            <div id="char_chcont">
+                <div class="chcont_left">
+                    <div id="chcont_pic"><img src="img/avatar_1.jpg" alt="Michele"></div>
+                    <ul>
+                        <li class="chcont_name">Michele</li>
+                        <li class="last_access">Ultimo accesso oggi alle</li>
+                    </ul>
+                </div>
+                <div class="chcont_right">
+                    <li><i class="fas fa-search"></i></li>
+                    <li><i class="fas fa-paperclip"></i></li>
+                    <li><i class="fas fa-ellipsis-v"></i></li>
+                </div>
+            </div>
             <div id="char_conv">
             </div>
-            <div id="char_board"></div>
+            <div id="char_board">
+                <div id="emojis"><i class="far fa-smile"></i></div>
+                <div id="msg_bar"><input id="write_msg" type="text" placeholder="Scrivi un messaggio"></div>
+                <div id="vocal_msg"><i class="fas fa-microphone"></i></div>
+            </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 

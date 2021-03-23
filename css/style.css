@@ -2,13 +2,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Lato", sans-serif;
 }
 
 body {
-    background: #009688;
+/*     background: #009688; */
+    background: linear-gradient(
+        to bottom,
+        #009688 150px,
+        #dbdbd3 150px
+    );
     width: 100%;
     height: 100vh;
     position: relative;
+}
+
+ul {
+    list-style: none;
+}
+
+i {
+    cursor: pointer;
 }
 
 .container {
@@ -34,25 +48,121 @@ body {
 #coar_user {
     width: 100%;
     height: 70px;
-    background: orangered;
+    background: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#coar_user ul li,
+#char_chcont .chcont_right li {
+    display: inline-block;
+}
+
+#user_pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-right: 7px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+#user_name {
+    vertical-align: middle;
+    font-weight: 600;
+    color: #555;
+    font-size: 18px;
+}
+
+#user_pic img {
+    width: 100%;
+    height: 100%;
+}
+
+.cous_right li i,
+.chcont_right li i {
+    font-size: 24px;
+    color: #aaa;
+    margin-right: 12px;
 }
 
 #coar_newmsg {
     width: 100%;
     height: 80px;
-    background: lightblue;
+    background: #8edafc;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#coar_newmsg .nm_icon {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 100%;
+    text-align: center;
+    margin-right: 15px;
+}
+
+#coar_newmsg .nm_icon i {
+    font-size: 24px;
+    line-height: 50px;
+    color: #8edafc;
+}
+
+#coar_newmsg .nm_title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #555;
+}
+
+#coar_newmsg .nm_text {
+    font-size: 16px;
+    color: #777;
+    text-decoration: underline;
 }
 
 #coar_src {
     width: 100%;
-    height: 50px;
-    background: orange;
+    height: 60px;
+    background: #f3f3f3;
+    padding: 10px;
+}
+
+.coar_src_container {
+    display: flex;
+    align-items: center;
+    background: #fff;
+}
+
+#cont_src {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    color: #555;
+}
+
+#coar_src_btn {
+    width: 80px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#coar_src_btn i {
+    font-size: 14px;
+    color: #aaa;
 }
 
 #contact_list {
     width: 100%;
-    height: calc(100% - 200px);
-    background: yellow;
+    height: calc(100% - 210px);
+    background: #fff;
 }
 
 
@@ -62,19 +172,55 @@ body {
     width: 65%;
     height: 100%;
     background: olive;
+    border-left: 1px solid #ccc;
     position: relative;
 }
 
 #char_chcont {
     width: 100%;
     height: 70pX;
-    background: darkblue;
+    background: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#char_chcont .chcont_left {
+    display: flex;
+    align-items: center;
+}
+
+#chcont_pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+#chcont_pic img {
+    width: 100%;
+    height: 100%;
+}
+
+#char_chcont .chcont_name {
+    font-weight: 600;
+    color: #555;
+    font-size: 18px; 
+}
+
+#char_chcont .last_access {
+    font-size: 16px;
+    color: #777;
 }
 
 #char_conv {
     width: 100%;
     height: calc(100% - 70px);
-    background: blue;
+    background-image: url('../img/mine.jpg');
+    background-position: center;
+    background-repeat: repeat;
 }
 
 #char_board {
@@ -83,5 +229,34 @@ body {
     z-index: 1;
     width: 100%;
     height: 70px;
-    background: cyan;
+    background: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#emojis, #vocal_msg {
+    width: 100px;
+    height: 100%;
+    text-align: center;
+}
+
+#emojis i, #vocal_msg i {
+    font-size: 24px;
+    color: #aaa;
+    line-height: 70px;
+}
+
+#msg_bar {
+    padding: 10px 0;
+    flex-grow: 1;
+    height: 100%;
+}
+
+#write_msg {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 25px;
 }

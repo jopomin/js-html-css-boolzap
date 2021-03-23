@@ -63,9 +63,12 @@
                 </div>
             </div>
             <div id="char_conv">
-                <ul>
-                    <li v-for="msg in boardMsg" :class="(msg.status == 'sent')?'msg_sent':'msg_rec'">{{msg.text}}</li>
-                </ul>
+                <div v-for="msg in boardMsg" :class="(msg.status == 'sent')?'msg_right':'msg_left'">
+                    <div :class="(msg.status == 'sent')?'msg_sent':'msg_rec'">
+                        <p class="msg_text">{{msg.text}}</p>
+                        <p class="msg_date">{{msg.date}}</p>
+                    </div>
+                </div>
             </div>
             <div id="char_board">
                 <div id="emojis"><i class="far fa-smile"></i></div>

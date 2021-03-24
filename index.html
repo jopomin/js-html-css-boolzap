@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div id="contact_list">
-                <div class="contact" v-for="contact in contacts">
+                <div class="contact" v-for="(contact, i) in contacts" @click="showMsg(i)">
                     <div class="avatar_cont">
                         <img :src="'img/avatar'+contact.avatar+'.jpg'" alt="contact.name">
                     </div>
@@ -50,9 +50,9 @@
         <div id="chat_area">
             <div id="char_chcont">
                 <div class="chcont_left">
-                    <div id="chcont_pic"><img src="img/avatar_1.jpg" alt="Michele"></div>
+                    <div id="chcont_pic"><img :src="'img/avatar_'+(x+1)+'.jpg'" alt="contacts[x].name"></div>
                     <ul>
-                        <li class="chcont_name">Michele</li>
+                        <li class="chcont_name">{{contacts[x].name}}</li>
                         <li class="last_access">Ultimo accesso oggi alle</li>
                     </ul>
                 </div>
@@ -67,6 +67,12 @@
                     <div :class="(msg.status == 'sent')?'msg_sent':'msg_rec'">
                         <p class="msg_text">{{msg.text}}</p>
                         <p class="msg_date">{{msg.date}}</p>
+                    </div>
+                </div>
+                <div v-for="(message in contacts[x].messages" :class="(message.status == 'sent')?'msg_right':'msg_left'">
+                    <div :class="(message.status == 'sent')?'msg_sent':'msg_rec'">
+                        <p class="msg_text">{{message.text}}</p>
+                        <p class="msg_date">{{message.date}}</p>
                     </div>
                 </div>
             </div>

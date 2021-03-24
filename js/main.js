@@ -3,6 +3,7 @@ var app = new Vue ({
     data: {
         newMsg: "",
         boardMsg: [],
+        x: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -98,6 +99,9 @@ var app = new Vue ({
                     status: 'sent'
                 });
             this.newMsg = "";
+        },
+        showMsg(i) {
+            this.x = i;
         }
     }
 });

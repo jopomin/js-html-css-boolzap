@@ -2,7 +2,6 @@ var app = new Vue ({
     el: "#root",
     data: {
         newMsg: "",
-        boardMsg: [],
         x: 0,
         contacts: [
             {
@@ -92,17 +91,31 @@ var app = new Vue ({
     },
 
     methods: {
-        addMsg() {
-            this.boardMsg.push ({
-                    date: '10/01/2020 15:30:55',
-                    text: this.newMsg,
-                    status: 'sent'
-                });
+        addMsg(x) {
+
+            this.contacts[x].messages.push({
+                date: '10/01/2020 15:57:00',
+                text: this.newMsg,
+                status: 'sent'
+            });
+
             this.newMsg = "";
+
+            setTimeout( () => this.autoMsg(x), 1000);
+
         },
+
+        autoMsg(x) {
+            this.contacts[x].messages.push({
+                date: '10/01/2020 15:57:01',
+                text: 'Ok',
+                status: 'received'
+            });
+        },
+
         showMsg(i) {
             this.x = i;
-        }
+        },
     }
 });
 

@@ -343,3 +343,10 @@ i {
     background: #ebebeb;
     cursor: pointer;
 }
+
+/*  ACTIVE */
+
+.contact.active {
+    background: #ddd;
+    cursor: pointer;
+}

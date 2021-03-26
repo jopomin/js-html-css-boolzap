@@ -3,6 +3,9 @@ var app = new Vue ({
     data: {
         newMsg: "",
         x: 0,
+        f: [],
+        search: "",
+        filtrati: [],
         contacts: [
             {
                 name: 'Michele',
@@ -87,6 +90,74 @@ var app = new Vue ({
                     }
                 ],
             },
+            {
+                name: 'Giorgio',
+                avatar: '_5',
+                visible: true,
+                messages: [
+                    {
+                        date: '10/01/2020 15:30:55',
+                        text: 'Lo sai che ha aperto una nuova pizzeria?',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        text: 'Si, ma preferirei andare al cinema',
+                        status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Gioia',
+                avatar: '_6',
+                visible: true,
+                messages: [
+                    {
+                        date: '10/01/2020 15:30:55',
+                        text: 'Lo sai che ha aperto una nuova pizzeria?',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        text: 'Si, ma preferirei andare al cinema',
+                        status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Fabrizio',
+                avatar: '_7',
+                visible: true,
+                messages: [
+                    {
+                        date: '10/01/2020 15:30:55',
+                        text: 'Lo sai che ha aperto una nuova pizzeria?',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        text: 'Si, ma preferirei andare al cinema',
+                        status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Giovanni',
+                avatar: '_8',
+                visible: true,
+                messages: [
+                    {
+                        date: '10/01/2020 15:30:55',
+                        text: 'Lo sai che ha aperto una nuova pizzeria?',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        text: 'Si, ma preferirei andare al cinema',
+                        status: 'received'
+                    }
+                ],
+            },
         ]
     },
 
@@ -94,7 +165,7 @@ var app = new Vue ({
         addMsg(x) {
 
             this.contacts[x].messages.push({
-                date: '10/01/2020 15:57:00',
+                date: dayjs().format('DD MM YYYY hh:mm:ss'),
                 text: this.newMsg,
                 status: 'sent'
             });
@@ -107,7 +178,7 @@ var app = new Vue ({
 
         autoMsg(x) {
             this.contacts[x].messages.push({
-                date: '10/01/2020 15:57:01',
+                date: dayjs().format('DD MM YYYY hh:mm:ss'),
                 text: 'Ok',
                 status: 'received'
             });
@@ -115,6 +186,16 @@ var app = new Vue ({
 
         showMsg(i) {
             this.x = i;
+        },
+
+        filtra() {
+            let ricerca = this.search.toLowerCase();
+            this.contacts = this.contacts.filter(contact => {
+                return contact.name.toLowerCase().includes(ricerca)
+            });
+            console.log(this.contacts);
+            console.log(app);
+            console.log(this.x);
         },
     }
 });

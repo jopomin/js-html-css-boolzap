@@ -163,6 +163,7 @@ i {
     width: 100%;
     height: calc(100% - 210px);
     background: #fff;
+    overflow-y: scroll;
 }
 
 .contact {

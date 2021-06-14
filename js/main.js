@@ -4,8 +4,14 @@ var app = new Vue ({
         newMsg: "",
         x: 0,
         f: [],
-        search: "",
+/*         search: "", */
+        searchInput: "",
         filtrati: [],
+        user: 
+            {
+                name: 'Giovanni Porcelli',
+                avatar: '_me'
+            },
         contacts: [
             {
                 name: 'Michele',
@@ -188,16 +194,17 @@ var app = new Vue ({
             this.x = i;
         },
 
-        filtra() {
-            let ricerca = this.search.toLowerCase();
-            this.contacts = this.contacts.filter(contact => {
-                return contact.name.toLowerCase().includes(ricerca)
+        searchContact() {
+            let self = this;
+            this.contacts.forEach((element) => {
+                console.log(element);
+                if (element.name.toLowerCase().includes(self.searchInput.toLowerCase())) {
+                    element.visible = true;
+                } else {
+                    element.visible = false;
+                }
             });
-            console.log(this.contacts);
-            console.log(app);
-            console.log(this.x);
-        },
+        }
     }
-});
-
-Vue.config.devtools = true;
+},
+)

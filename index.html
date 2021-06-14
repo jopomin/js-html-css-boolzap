@@ -16,8 +16,8 @@
         <div id="cont_area">
             <div id="coar_user">
                 <ul class="cous_left">
-                    <li id="user_pic"><img src="img/avatar_io.jpg" alt=""></li>
-                    <li id="user_name">Nome Utente</li>
+                    <li id="user_pic"><img :src="'img/avatar' + user.avatar + '.jpg'" :alt="user.name"></li>
+                    <li id="user_name">{{user.name}}</li>
                 </ul>
                 <ul class="cous_right">
                     <li><i class="fas fa-circle-notch"></i></li>
@@ -35,11 +35,11 @@
             <div id="coar_src">
                 <div class="coar_src_container">
                     <div id="coar_src_btn"><i class="fas fa-search"></i></div>
-                    <input type="search" id="cont_src" placeholder="Cerca o inizia una nuova chat" v-model="search" @keyup.enter="filtra">
+                    <input type="search" id="cont_src" placeholder="Cerca o inizia una nuova chat" v-model="searchInput" @keyup="searchContact">
                 </div>
             </div>
             <div id="contact_list">
-                <div class="contact" v-for="(contact, i) in contacts" :class="(i == x)?'active':null" @click="showMsg(i)">
+                <div class="contact" v-for="(contact, i) in contacts" :class="(i == x)?'active':null" @click="showMsg(i)" v-if="contact.visible">
                     <div class="avatar_cont">
                         <img :src="'img/avatar'+contact.avatar+'.jpg'" :alt="contact.name">
                     </div>

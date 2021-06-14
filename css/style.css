@@ -338,11 +338,67 @@ i {
     line-height: 2.5;
 }
 
+.message {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.message .msg_options {
+    position: absolute;
+    padding: 20px;
+    top: 95%;
+    width: 200px;
+    z-index: 999;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    color: #333;
+}
+
+.msg_info {
+    margin-bottom: 10px;
+}
+
+.msg_sent .msg_options {
+    background: #d5f9ba;
+    right: 5%;
+    text-align: right;
+}
+
+.msg_sent .msg_text_container p {
+    text-align: right;
+}
+
+.msg_rec .msg_options {
+    background: #fff;
+    left: 5%;
+}
+
+.message i {
+    margin-left: 15px;
+    color: #333;
+    visibility: hidden;
+}
+
 /*  HOVER  */
 
 .contact:hover {
     background: #ebebeb;
     cursor: pointer;
+}
+
+.msg_options > div:hover {
+    cursor: pointer;
+    color: rgba(51, 51, 51, 0.5);
+}
+
+.message:hover i {
+    visibility: visible;
+}
+
+.message i:hover {
+    cursor: pointer;
+    color: rgba(51, 51, 51, 0.5);
 }
 
 /*  ACTIVE */

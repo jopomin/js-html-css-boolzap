@@ -2,11 +2,13 @@ var app = new Vue ({
     el: "#root",
     data: {
         newMsg: "",
+        activeMsg: {
+            index: false,
+            visible: false
+        },
         x: 0,
         f: [],
-/*         search: "", */
         searchInput: "",
-        filtrati: [],
         user: 
             {
                 name: 'Giovanni Porcelli',
@@ -204,6 +206,21 @@ var app = new Vue ({
                     element.visible = false;
                 }
             });
+        },
+
+        showOptions(i) {
+            if (this.activeMsg.index !== false && this.activeMsg.index !== i) {
+                this.activeMsg.visible = false;
+                this.activeMsg.index = false;
+            }
+            this.activeMsg.visible = (this.activeMsg.visible) ? false : true;
+            this.activeMsg.index = i;
+        },
+
+        delMsg(i) {
+            this.contacts[this.x].messages.splice(i, 1);
+            this.activeMsg.visible = false;
+            this.activeMsg.index = false;
         }
     }
 },

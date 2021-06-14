@@ -63,10 +63,17 @@
                 </div>
             </div>
             <div id="char_conv">
-                <div v-for="message in contacts[x].messages" :class="(message.status == 'sent')?'msg_right':'msg_left'">
-                    <div :class="(message.status == 'sent')?'msg_sent':'msg_rec'">
-                        <p class="msg_text">{{message.text}}</p>
-                        <p class="msg_date">{{message.date}}</p>
+                <div v-for="(message, i) in contacts[x].messages" :class="(message.status == 'sent')?'msg_right':'msg_left'">
+                    <div class="message" :class="(message.status == 'sent')?'msg_sent':'msg_rec'">
+                        <div class="msg_text_container">
+                            <p class="msg_text">{{message.text}}</p>
+                            <p class="msg_date">{{message.date}}</p>
+                        </div>
+                        <i class="fas fa-chevron-down" @click="showOptions(i)"></i>
+                        <div class="msg_options" v-if="activeMsg.visible && activeMsg.index === i">
+                            <div class="msg_info">Info Messaggio</div>
+                            <div class="del_msg" @click="delMsg(i)">Elimina Messaggio</div>
+                        </div>
                     </div>
                 </div>
             </div>

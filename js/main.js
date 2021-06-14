@@ -221,6 +221,14 @@ var app = new Vue ({
             this.contacts[this.x].messages.splice(i, 1);
             this.activeMsg.visible = false;
             this.activeMsg.index = false;
+        },
+
+        getLastMsg(i) {
+            return this.contacts[i].messages[this.contacts[i].messages.length -1].text.slice(0, 30) + '...'; 
+        },
+
+        getLastDate(i) {
+            return this.contacts[i].messages[this.contacts[i].messages.length -1].date;
         }
     }
 },

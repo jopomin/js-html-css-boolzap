@@ -189,10 +189,31 @@ i {
     height: 100%;
 }
 
-.contact p {
+.contact_info_cont {
+    width: calc(100% - 80px);
+}
+
+.contact_name {
     font-size: 18px;
+    margin-bottom: 10px;
     font-weight: 600;
     color: #555;
+}
+
+.cont_sub_cont {
+    display: flex;
+    justify-content: space-between;
+}
+
+.last_msg {
+    font-size: 14px;
+    color: rgba(85, 85, 85, 0.4);
+}
+
+.last_date {
+    font-size: 10px;
+    color: #aaa;
+    text-align: right;
 }
 
 

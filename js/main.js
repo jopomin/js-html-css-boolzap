@@ -7,54 +7,53 @@ var app = new Vue ({
             visible: false
         },
         x: 0,
-        f: [],
         searchInput: "",
         user: 
             {
-                name: 'Giovanni Porcelli',
+                name: 'Giovanni PM 🌊🐘',
                 avatar: '_me'
             },
         contacts: [
             {
-                name: 'Michele',
+                name: 'Stefania',
                 avatar: '_1',
                 visible: true,
                 messages: [
                     {
-                        date: '10/01/2020 15:30:55',
-                        text: 'Hai portato a spasso il cane?',
-                        status: 'sent'
-                    },
-                    {
-                        date: '10/01/2020 15:50:00',
-                        text: 'Ricordati di dargli da mangiare',
-                        status: 'sent'
-                    },
-                    {
-                        date: '10/01/2020 16:15:22',
-                        text: 'Tutto fatto!',
+                        date: '09/06/2020 15:30:55',
+                        text: 'Hai portato giù Larry?',
                         status: 'received'
+                    },
+                    {
+                        date: '09/06/2020 15:31:23',
+                        text: 'Ricordati di dargli da mangiare',
+                        status: 'received'
+                    },
+                    {
+                        date: '09/06/2021 16:15:22',
+                        text: 'Siii, non ti preoccupare!',
+                        status: 'sent'
                     }
                 ],
             },
             {
-                name: 'Fabio',
+                name: 'Prof. Mancini',
                 avatar: '_2',
                 visible: true,
                 messages: [
                     {
-                        date: '20/03/2020 16:30:00',
-                        text: 'Ciao come stai?',
+                        date: '07/06/2021 16:30:00',
+                        text: 'Salve prof, a che ora abbiamo lezione domani?',
                         status: 'sent'
                     },
                     {
-                        date: '20/03/2020 16:30:55',
-                        text: 'Bene grazie! Stasera ci vediamo?',
+                        date: '07/06/2021 16:38:55',
+                        text: 'Ciao Giovanni, 16 come sempre. Mi dai conferma?',
                         status: 'received'
                     },
                     {
-                        date: '20/03/2020 16:35:00',
-                        text: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                        date: '07/06/2021 16:40:02',
+                        text: 'Certo. A domani allora!',
                         status: 'sent'
                     }
                 ],
@@ -65,18 +64,18 @@ var app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                        date: '28/03/2020 10:10:40',
-                        text: 'La Marianna va in campagna',
+                        date: '05/06/2021 10:10:40',
+                        text: 'Ma il numero di Stefano è sempre quello? Sto provando a chiamarlo da ore ma è sempre occupato 😡',
                         status: 'received'
                     },
                     {
-                        date: '28/03/2020 10:20:10',
-                        text: 'Sicuro di non aver sbagliato chat?',
+                        date: '05/06/2021 10:20:10',
+                        text: 'Dai calmati, l\'ha cambiato una vita fa 🤣 Ecco il nuovo 3471234567',
                         status: 'sent'
                     },
                     {
-                        date: '28/03/2020 16:15:22',
-                        text: 'Ah scusa!',
+                        date: '05/06/2021 10:25:22',
+                        text: 'E me lo dici solo ora? 🤦‍♂️',
                         status: 'received'
                     }
                 ],
@@ -87,13 +86,13 @@ var app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                        date: '10/01/2020 15:30:55',
-                        text: 'Lo sai che ha aperto una nuova pizzeria?',
+                        date: '01/06/2021 15:30:55',
+                        text: 'Ti ricordi che giovedì è il compleanno di Michele? Dobbiamo ancora pensare al regalo',
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 15:50:00',
-                        text: 'Si, ma preferirei andare al cinema',
+                        date: '01/06/2020 15:50:00',
+                        text: 'Si si, lo so. Non sono ancora riuscito a trovare un attimo per pensarci...',
                         status: 'received'
                     }
                 ],
@@ -104,14 +103,14 @@ var app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                        date: '10/01/2020 15:30:55',
-                        text: 'Lo sai che ha aperto una nuova pizzeria?',
-                        status: 'sent'
+                        date: '01/06/2020 13:30:55',
+                        text: 'Che pagine si studiavano per domani?',
+                        status: 'received'
                     },
                     {
-                        date: '10/01/2020 15:50:00',
-                        text: 'Si, ma preferirei andare al cinema',
-                        status: 'received'
+                        date: '01/06/2020 13:40:00',
+                        text: 'Da 120 a 143',
+                        status: 'sent'
                     }
                 ],
             },
@@ -121,19 +120,19 @@ var app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                        date: '10/01/2020 15:30:55',
-                        text: 'Lo sai che ha aperto una nuova pizzeria?',
+                        date: '31/05/2021 11:22:14',
+                        text: 'https://www.amazon.it/Winsor-Newton-acquerelli-confezione-tascabile/dp/B00004THXI questi sono gli acquerelli che mi ha consigliato Michele',
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 15:50:00',
-                        text: 'Si, ma preferirei andare al cinema',
+                        date: '31/01/2020 15:50:00',
+                        text: 'Grazie mille!',
                         status: 'received'
                     }
                 ],
             },
             {
-                name: 'Fabrizio',
+                name: 'Leandro',
                 avatar: '_7',
                 visible: true,
                 messages: [
@@ -150,18 +149,52 @@ var app = new Vue ({
                 ],
             },
             {
-                name: 'Giovanni',
+                name: 'Sandro Tennis Club',
                 avatar: '_8',
                 visible: true,
                 messages: [
                     {
-                        date: '10/01/2020 15:30:55',
-                        text: 'Lo sai che ha aperto una nuova pizzeria?',
+                        date: '23/05/2021 14:30:55',
+                        text: 'Non credo di riuscire a fare in tempo per la prossima settimana. Tu quando potresti?',
+                        status: 'received'
+                    },
+                    {
+                        date: '23/05/2021 14:50:00',
+                        text: 'Vediamo un po\', ti chiamo io più tardi e ci organizziamo',
+                        status: 'sent'
+                    }
+                ],
+            },
+            {
+                name: 'Mamma',
+                avatar: '_9',
+                visible: true,
+                messages: [
+                    {
+                        date: '13/05/2021 09:30:02',
+                        text: 'Prima di ritirarti compra 1kg di pane se riesci',
+                        status: 'received'
+                    },
+                    {
+                        date: '13/05/2021 09:55:02',
+                        text: 'Ok, sono a casa tra una ventina di minuti',
+                        status: 'sent'
+                    }
+                ],
+            },
+            {
+                name: 'Zio Mario',
+                avatar: '_10',
+                visible: true,
+                messages: [
+                    {
+                        date: '09/05/2021 12:45:55',
+                        text: 'Ciao zio, che dovevo ricordare a papà?',
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 15:50:00',
-                        text: 'Si, ma preferirei andare al cinema',
+                        date: '09/05/2021 13:03:00',
+                        text: 'Digli di portarmi la macchina sabato mattina così gli do un\'occhiata',
                         status: 'received'
                     }
                 ],
@@ -173,20 +206,20 @@ var app = new Vue ({
         addMsg(x) {
 
             this.contacts[x].messages.push({
-                date: dayjs().format('DD MM YYYY hh:mm:ss'),
+                date: dayjs().format('DD/MM/YYYY hh:mm:ss'),
                 text: this.newMsg,
                 status: 'sent'
             });
 
             this.newMsg = "";
 
-            setTimeout( () => this.autoMsg(x), 1000);
+            setTimeout( () => this.autoMsg(x), 3000);
 
         },
 
         autoMsg(x) {
             this.contacts[x].messages.push({
-                date: dayjs().format('DD MM YYYY hh:mm:ss'),
+                date: dayjs().format('DD/MM/YYYY hh:mm:ss'),
                 text: 'Ok',
                 status: 'received'
             });
